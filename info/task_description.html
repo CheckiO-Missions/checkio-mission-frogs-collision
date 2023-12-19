@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    A frog hopping along on the infinite two-dimensional grid of integers is represented as a 4-tuple of the form <code>{% if is_js %}[x, y, dx, dy]{% else %}(x, y, dx, dy){% endif %}</code> so that <code>x, y</code> is the frog’s starting position at time <code>t = 0</code>, and <code>dx, dy</code> is its constant direction vector for each hop. Time advances in discrete integer steps so that each frog makes one hop at every tick of the clock. 
+</p>
+
+<p style="text-align: justify;">
+    Given two frogs <code>frog1, frog2</code>, that initially stand on different squares, return the time when both frogs hop into the same square. If these two frogs never hop into the same square at the same time, this function should return <code>{% if is_js %}null{% else %}None{% endif %}</code>.
+</p>
+
+<p style="text-align: justify;">
+    Let's look at the example <code>{% if is_js %}[0, 0, 0, 2], [0, 10, 0, 1]{% else %}(0, 0, 0, 2), (0, 10, 0, 1){% endif %}</code>. <code>X</code>'s are equal and don't change (<code>dx1 == dx2 == 0</code>), so we may ignore them.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}frogs-collision.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Your function should not contain any loops whatsoever, but the result should be computed with conditional statements and integer arithmetic.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> Two tuples of four integers <span translate="no">{% if is_js %}number{% else %}int{% endif %}</span>.
+</p>
+
+<p>
+    <strong>Output:</strong> Integer or {% if is_js %}null{% else %}None{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
