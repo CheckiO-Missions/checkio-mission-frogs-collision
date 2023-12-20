@@ -2,7 +2,9 @@
 {% block env %}{% endblock env %}
 
 {% block start %}
-def frogs_collision(frog1: tuple[int, int, int, int], frog2: tuple[int, int, int, int]) -> int | None:
+Frog = tuple[int, int, int, int]
+
+def frogs_collision(frog1: Frog, frog2: Frog) -> int | None:
     # your code here
     return 0
 {% endblock start %}
