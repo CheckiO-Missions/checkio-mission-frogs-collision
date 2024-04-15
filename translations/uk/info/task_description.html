@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Жаба, яка стрибає по нескінченній двовимірній сітці цілих чисел, подається у вигляді 4-х кортежів виду <code>{% if is_js %}[x, y, dx, dy]{% else %}(x, y, dx, dy){% endif %}</code> де <code>x, y</code> - початкова позиція жаби у момент часу <code>t = 0</code>, а <code>dx, dy</code> - вектор її постійного напрямку для кожного стрибка. Час йде дискретними цілочисельними кроками так, що кожна жаба робить один стрибок за кожний такт годинника. 
+</p>
+
+<p style="text-align: justify;">
+    За заданими двома жабами <code>frog1, frog2</code>, які спочатку стоять на різних клітинках, поверніть час, коли обидві жаби стрибнуть в одну і ту ж клітинку. Якщо ці дві жаби ніколи не стрибають в одну і ту ж клітинку одночасно, то функція повинна повернути <code>{% if is_js %}null{% else %}None{% endif %}</code>.
+</p>
+
+<p style="text-align: justify;">
+    Розглянемо приклад <code>{% if is_js %}[0, 0, 0, 2], [0, 10, 0, 1]{% else %}(0, 0, 0, 2), (0, 10, 0, 1){% endif %}</code>. <code>X</code> рівні і не змінюються (<code>dx1 == dx2 == 0</code>), тому ми можемо їх ігнорувати.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}frogs-collision.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Ваша функція не повинна містити жодних циклів, але результат має обчислюватися за допомогою умовних операторів та цілочисельної арифметики.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Два кортежі по чотири цілих числа <span>{% if is_js %}number{% else %}int{% endif %}</span>.
+</p>
+
+<p>
+   <strong>Вихідні дані:</strong> Ціле число або {% if is_js %}null{% else %}Немає{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Завдання взято з сайту <span>Python CCPS 109</span>. Воно викладається для <span>Ryerson Chang School of Continuing Education</span> за допомогою <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
