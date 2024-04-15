@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    一只青蛙在由整数组成的无限二维网格上跳跃，它的四元组表示形式为 <code>{% if is_js %}[x, y, dx, dy]{% else %}(x, y, dx, dy){% endif %}</code>其中<code>x, y</code> 是青蛙在<code>t = 0</code> 时间的起始位置，<code>dx, dy</code> 是青蛙每次跳跃的恒定方向向量。时间以离散的整数步进，因此每只青蛙在时钟每走一步时都要跳一次。 
+</p>
+
+<p style="text-align: justify;">
+    给定两只最初站在不同方格上的青蛙<code>frog1, frog2</code> ，返回两只青蛙跳入同一方格的时间。如果这两只青蛙从未同时跳入同一方格，则该函数应返回 <code>{% if is_js %}null{% else %}None{% endif %}</code>.
+</p>
+
+<p style="text-align: justify;">
+    让我们看看示例 <code>{% if is_js %}[0, 0, 0, 2], [0, 10, 0, 1]{% else %}(0, 0, 0, 2), (0, 10, 0, 1){% endif %}</code>.<code>X</code>的值相等，不会发生变化 (<code>dx1 == dx2 == 0</code>) ，因此我们可以忽略它们。
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}frogs-collision.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    您的函数不应包含任何循环，但应使用条件语句和整数运算来计算结果。
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入</strong>两个包含四个整数的元组 <span>{% if is_js %}number{% else %}int{% endif %}</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>整数或{% if is_js %}null{% else %}无{% endif %}. 
+</p>
+
+
+<p>
+    <strong>示例：</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>该任务取自<span>Python CCPS 109</span> 。它是由<span>Ryerson Chang School of Continuing Education</span> 教授的。<a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
