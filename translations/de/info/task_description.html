@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Ein Frosch, der auf einem unendlichen zweidimensionalen Gitter aus ganzen Zahlen hüpft, wird als 4-Tupel der Form <code>{% if is_js %}[x, y, dx, dy]{% else %}(x, y, dx, dy){% endif %}</code> dargestellt, wobei <code>x, y</code> die Startposition des Frosches zum Zeitpunkt <code>t = 0</code> und <code>dx, dy</code> sein konstanter Richtungsvektor für jeden Sprung ist. Die Zeit schreitet in diskreten ganzzahligen Schritten voran, so dass jeder Frosch bei jedem Ticken der Uhr einen Sprung macht. 
+</p>
+
+<p style="text-align: justify;">
+    Bei zwei Fröschen <code>frog1, frog2</code>, die anfangs auf verschiedenen Feldern stehen, geben Sie die Zeit zurück, zu der beide Frösche auf dasselbe Feld hüpfen. Wenn diese beiden Frösche nie zur gleichen Zeit auf dasselbe Quadrat hüpfen, sollte diese Funktion zurückgeben <code>{% if is_js %}null{% else %}None{% endif %}</code>.
+</p>
+
+<p style="text-align: justify;">
+    Schauen wir uns das Beispiel an <code>{% if is_js %}[0, 0, 0, 2], [0, 10, 0, 1]{% else %}(0, 0, 0, 2), (0, 10, 0, 1){% endif %}</code>. <code>X</code> sind gleich und ändern sich nicht (<code>dx1 == dx2 == 0</code>), also können wir sie ignorieren.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}frogs-collision.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Ihre Funktion sollte keinerlei Schleifen enthalten, sondern das Ergebnis sollte mit bedingten Anweisungen und Integer-Arithmetik berechnet werden.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Zwei Tupel mit vier ganzen Zahlen <span>{% if is_js %}number{% else %}int{% endif %}</span>.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Ganzzahl oder {% if is_js %}null{% else %}Keine{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Die Mission wurde von <span>Python CCPS 109</span> übernommen. Sie wird für <span>Ryerson Chang School of Continuing Education</span> von <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
