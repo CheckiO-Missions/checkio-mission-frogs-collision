@@ -26,7 +26,7 @@ TESTS = {
         {
             "input": [(0, 0, 0, 0), (1, 1, 3, 3)],
             "answer": None,
-            # "explanation": {'hop_1': 12, 'hop_2': 12},
+            "explanation": {'hop_1': 12, 'hop_2': 12},
         },
     ],
     "Extra": [
